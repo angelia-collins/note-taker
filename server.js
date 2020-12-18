@@ -19,9 +19,9 @@ app.get("/notes", function (req, res) {
 
 //api routes
 app.get("/api/notes", function(req, res) {
-    fs.readFilefs.readFile(__dirname + "/notes.html", function(err, data) {
+    fs.readFile(__dirname + "/db.json", function(err, data) {
         if (err) throw err;
-        res.writeHead(200, { "Content-Type": "text/html" });
+        res.writeHead(200, { "Content-Type": "text/json" });
         res.end(data);
       });
     return res.json(characters);
