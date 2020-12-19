@@ -24,7 +24,7 @@ app.get("/api/notes", function(req, res) {
         res.writeHead(200, { "Content-Type": "text/json" });
         res.end(data);
       });
-    return res.json(characters);
+    return res.json();
   });
 
 
